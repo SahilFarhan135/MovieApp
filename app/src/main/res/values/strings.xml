@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Printful</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="dark">Dark Mode</string>
+    <string name="enable_darkmode">Enable Darkmode</string>
+    <string name="title">Title :</string>
+    <string name="release_date">Release Date :</string>
+</resources>
