@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
     int postion = 0;
     Button nextBtn,skip;
     ViewPager viewPager;
-    int[] bacground = {R.drawable.movie1,R.drawable.movie3};
-    String[] heading = {"Wanna See Movie", "Enjoy Your Movie"};
+    int[] bacground = {R.drawable.kkk,R.drawable.moviem};
+    String[] heading = {"Wanna See Movie? ", "Enjoy Your Movie"};
     String[] description = {
-            "Want to watch movie and relax? but can't find a one. We Bring you set of all latest one movie at one platfrom",
-            "Choose movie, see rating and enjoy your movie"
+            "Want to watch a movie and relax? could not find a one. We Bring you set of all latest movies at one platfrom",
+            "Choose movie, see rating then Watch it online"
     };
 
     SharedPreferences sharedPreferences;
@@ -55,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
                     postion++;
                     viewPager.setCurrentItem(postion);
                 }
-                if (postion == 2) {
+                if (postion == 1) {
                     intentTomainScreen();
                 }
-                if(postion==bacground.length-1)
+                if(postion==1)
                 {
                     nextBtn.setText("Start");
                 }
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if(position==3)
+                if(position==1)
                 {
                     nextBtn.setText("Start");
                     skip.setVisibility(View.GONE);
